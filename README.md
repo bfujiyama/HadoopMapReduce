@@ -31,3 +31,18 @@ Consider breaking down into the following parts to write the mapper and reducer:
     Make the reducer handle what happens when "ABC" occurs
     Make the mapper output all tv shows (tv_shows, views) + (tv_shows, ABC)
     Make the reducer handle what happens for multiple tv_shows
+
+join2_mapper:
+read lines, and split lines into key & value
+if value is ABC or if value is a digit print it out
+
+join2_reducer:
+read lines and split lines into key & value
+if a key has changed (and it's not the first input)
+then check if ABC had been found and print out key and running total,
+if value is ABC then set some variable to mark that ABC was found (like abc_found = True)
+otherwise keep a running total of viewer counts
+
+The first two lines of your output should be:
+Almost_Games 49237
+Almost_News 46592
