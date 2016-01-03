@@ -9,7 +9,7 @@ The show-to-channel relationship is Many-to-Many. In other words, each show migh
 In pseudo-SQL it might be something like:
 select sum( viewer count) from File A, File B where FileA.TV show = FileB.TV show and FileB.Channel='ABC' grouped by TV show
 
-Generate datasets using:
+Generate datasets using: 
 sh make_data_join2.txt
 
 To make the mapper and reducer executable:
