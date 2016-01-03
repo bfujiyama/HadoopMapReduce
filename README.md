@@ -12,6 +12,10 @@ select sum( viewer count) from File A, File B where FileA.TV show = FileB.TV sho
 Generate datasets using:
 sh make_data_join2.txt
 
+To make the mapper and reducer executable:
+> chmod +x join1_mapper.py   
+> chmod +x join1_reducer.py  
+
 After uploading all 6 files to HDFS and writing the mapper and reducer codes, use the following command to run the mapreduce:
 > hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
    -input /user/cloudera/input \
@@ -21,6 +25,7 @@ After uploading all 6 files to HDFS and writing the mapper and reducer codes, us
    
 Test/debug mapper using:  
    cat join2_gen*.txt | ./join1_mapper.py | sort  
+   
 Test/debug mapper and reducer using:  
    cat join2_gen*.txt | ./join1_mapper.py | sort | ./join1_reducer.py
 
