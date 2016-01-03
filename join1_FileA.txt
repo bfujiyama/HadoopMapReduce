@@ -1,4 +1,0 @@
-able,991
-about,11
-burger,15
-actor,22
